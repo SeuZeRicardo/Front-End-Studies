@@ -1,0 +1,46 @@
+body, html {
+  font-family: Roboto, sans-serif;
+}
+
+h1, h2, h3, h4, h5 {    
+  color: #5572d6;
+}
+
+p {
+  color: #a9aeaf;
+}
+
+body {
+  background-color: #5572d6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.itens-section {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.item-image {
+  width: 90px;
+}
+
+.price-text {
+  color: #5572d6;
+}
