@@ -7,12 +7,13 @@ h1, h2, h3, h4, h5 {
 }
 
 p {
-  color: #a9aeaf;
+  color: #6d6d6d;
 }
 
 body {
   background-color: #5572d6;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -27,6 +28,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  padding: 20px;
 }
 
 .item {
@@ -35,6 +37,17 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 33%;
+}
+
+.item:hover {
+  background-color: #f5f5f5;
+  transition-duration: 0.4s;
+}
+
+.item-content {
+  margin: 10%;
+  width: 60%;
 }
 
 .item-image {
@@ -43,4 +56,20 @@ body {
 
 .price-text {
   color: #5572d6;
+  font-size: 2rem;
+}
+
+.currency-type {
+  font-weight: 700;
+  font-size: 1rem;
+  vertical-align: super;
+}
+
+.value-type {
+  font-weight: 700;
+  
+}
+
+.detail-type {
+  font-size: 1rem;
 }
