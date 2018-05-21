@@ -1,0 +1,101 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {    
+    background: url(img/background.jpg) no-repeat center;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.box-credit-card {
+    background-color: #ffffff;    
+    width: 30%;
+    margin: 0 auto;
+}
+
+.credit-card__header {
+    text-align: center;
+    font-size: 2em;    
+    color: #686868;
+    border-bottom: #686868 solid 1px;
+    padding: 0 0 15px;
+}
+
+.credit-card__option {    
+    border-bottom: #686868 solid 1px;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    padding: 10px 20px;
+}
+
+.credit-card__option:hover {    
+    opacity: 0.5;
+}
+
+.group-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flag-card {    
+    max-width: 100px;
+    height: auto;
+    padding-right: 20px;   
+}
+
+.credit-card__text {  
+    font-size: 1.4em;      
+}
+
+.btn {
+    background-color: #598bdd;
+    color: #ffffff;
+    border: 0;
+    width: 100%;
+    margin: auto;
+    padding: 20px 0;
+    text-transform: uppercase;
+    font-size: 1.15em;
+}
+
+.arrow--btn {
+    vertical-align: middle;
+}
+
+.opacity--non-checked {
+    opacity: 0.2;
+}
+
+
+/* Animation Dot */
+@keyframes blink {    
+    0% {
+      opacity: .2;
+    }    
+    20% {
+      opacity: 1;
+    }    
+    100% {
+      opacity: .2;
+    }
+}
+
+.saving span {    
+    animation-name: blink;    
+    animation-duration: 1.4s;    
+    animation-iteration-count: infinite;    
+    animation-fill-mode: both;
+}
+
+.saving span:nth-child(2) {    
+    animation-delay: .2s;
+}
+
+.saving span:nth-child(3) {    
+    animation-delay: .4s;
+}
