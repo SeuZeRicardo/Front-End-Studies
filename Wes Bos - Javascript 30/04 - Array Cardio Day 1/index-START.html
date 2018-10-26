@@ -31,29 +31,110 @@
 
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
+    
+    /***
+    * Filter é usado para filtrar um certo resultado, para isso acontecer é necessario criar uma função para retornar o valor que é necessario
+    **/
+
+    const inventorsAno = inventors.filter(function (inventor){
+      if(inventor.year >= 1500 && inventor.year < 1600){
+        return true;
+      }
+    });
+
+    console.log('Esses é a lista de inventores que nasceram entre 1500 e 1599 ->', inventorsAno);
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors' first and last names
 
+    /***
+    * Map é corre uma array e devolve o valor em uma nova array
+    Ele serve para mapear o que o usuario quer
+    **/
+
+    const nomeCompleto = inventors.map(function (inventor){
+      return inventor.first + inventor.last;
+    });
+
+    console.log('Esses é a lista de inventores com nome completo ->', nomeCompleto);
+    
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
+
+    const dataOrdenada = inventors.sort(function (a, b){
+      if(a.year > b.year){
+        return 1;
+      }
+      else {
+        return -1;
+      }
+    });
+
+    console.table(dataOrdenada);
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live?
 
+    /***
+    * Reduce soma faz a junção da propriedade e retorna os dados em uma unica varivel
+    **/
+
+    const inventoresVivos = inventors.reduce(function (anos, inventores){
+      return anos + (inventores.passed - inventores.year);
+    }, 0);
+
+    console.log('Anos vividos ->', inventoresVivos);
+
     // 5. Sort the inventors by years lived
+
+    const oldest = inventors.sort(function (a,b) {
+      const lastGuy = a.passed - a.year;
+      const nextGuy = b.passed - b.year;
+      return lastGuy > nextGuy ? -1 : 1;
+    });
+    console.log('Quantos anos cada invertor viveu ?', oldest);
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
+    // const category = document.querySelector('.mw-category');
+    // const links = [...category.querySelectorAll('a')];
+    // //Transforma o nodelist em Array
+
+    // const de = links
+    //                 .map(function (link){
+    //                   return link.textContent;
+    //                 })
+    //                 .filter(function (streetName){
+    //                   return streetName.includes('de');
+    //                 })
+
+    // console.log('Resultado final ->', de);
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+    const alpha = people.sort(function(lastOne, nextOne) {
+      const [alast, afirst] = lastOne.split(', ');
+      const [blast, bfirst] = nextOne.split(', ');
+      return alast > blast ? 1 : -1;
+    })
+
+    console.log(alpha);
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+    
+    const transportation = data.reduce(function(obj, item) {
+      //Verifica se na Array acima tem dados e quantos tem
+      if(!obj[item]){
+        obj[item] = 0;
+      }
+      obj[item]++;
+      return obj;
+    },{});
 
+    console.log(transportation)
   </script>
 </body>
 </html>
