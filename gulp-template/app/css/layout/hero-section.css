@@ -1,0 +1,17 @@
+.initial-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: normal;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 4;
+  color: #fff;
+  padding: 0 20px;
+  background-color: black; }
+  .initial-banner img {
+    width: 150px; }
